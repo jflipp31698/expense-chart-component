@@ -1,10 +1,12 @@
-
+import { GlobalStyles } from "./components/styles/Global";
+import Balance from "./components/Balance";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Test test</h1>
-    </div>
+    <>
+      <GlobalStyles />
+      <Balance />
+    </>
   );
 }
 export default App;
