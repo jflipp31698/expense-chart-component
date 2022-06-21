@@ -1,26 +1,31 @@
 import {FlexColumn} from "../components/styles/FlexColumn";
-import {FlexRow} from "../components/styles/FlexRow";
 import Icon from "../images/logo.svg";
 import styled from "styled-components";
 
 const BalanceCard = styled.div`
-    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: var(--soft-red);
     color: var(--cream);
-    padding: 0em 2em;
-    border-radius: 1em;
+    border-radius: 10px;
+    height: 12vh;
+    padding: 0em 1.25em;
+
+    @media (min-width: 1440px){
+        padding: 0em 2em;
+        height: 10vh;
+    }
 `
 
 const Balance = () => {
     return (
         <BalanceCard>
-            <FlexRow>
-                <div>
-                    <p>My balance</p>
-                    <h2>$921.48</h2>
-                </div>
-                <img src={Icon} />
-            </FlexRow>
+            <FlexColumn>
+                <h4>My balance</h4>
+                <h2>$921.48</h2>
+            </FlexColumn>
+            <img src={Icon} alt="Logo" />
         </BalanceCard>
     )
 }

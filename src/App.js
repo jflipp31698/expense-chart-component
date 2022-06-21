@@ -1,11 +1,13 @@
 import { GlobalStyles } from "./components/styles/Global";
-import Balance from "./components/Balance";
+import ExpenseChart from "./components/ExpenseChart";
 
 function App() {
+  var data = require('./data.json');
+
   return (
     <>
       <GlobalStyles />
-      <Balance />
+      <ExpenseChart days={data}/>
     </>
   );
 }
